@@ -1,11 +1,11 @@
 opcode_int,opcode_hex,name,signature,memarg,extra_imm
-13,0d,i8x16.shuffle,[v128~v128~v128] \to [v128],0,16
+13,0d,i8x16.shuffle,[v128~v128] \to [v128],0,16
 21,15,i8x16.extract_lane_s,[v128] \to [i32],0,1
 22,16,i8x16.extract_lane_u,[v128] \to [i32],0,1
 23,17,i8x16.replace_lane,[v128~i32] \to [v128],0,1
 24,18,i16x8.extract_lane_s,[v128] \to [i32],0,1
 25,19,i16x8.extract_lane_u,[v128] \to [i32],0,1
-26,1a,i16x8.replace_lane,[v128 i32] \to [v128],0,1
+26,1a,i16x8.replace_lane,[v128~i32] \to [v128],0,1
 27,1b,i32x4.extract_lane,[v128] \to [i32],0,1
 28,1c,i32x4.replace_lane,[v128~i32] \to [v128],0,1
 29,1d,i64x2.extract_lane,[v128] \to [i64],0,1

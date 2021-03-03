@@ -12,7 +12,7 @@ opcode_int,opcode_hex,name,signature,memarg,extra_imm
 10,0a,v128.load64_splat,[i32] \to [v128],1,0
 11,0b,v128.store,[i32~v128] \to [],1,0
 12,0c,v128.const,[] \to [v128],0,0
-13,0d,i8x16.shuffle,[v128~v128~v128] \to [v128],0,16
+13,0d,i8x16.shuffle,[v128~v128] \to [v128],0,16
 14,0e,i8x16.swizzle,[v128~v128] \to [v128],0,0
 15,0f,i8x16.splat,[i32] \to [v128],0,0
 16,10,i16x8.splat,[i32] \to [v128],0,0
@@ -25,7 +25,7 @@ opcode_int,opcode_hex,name,signature,memarg,extra_imm
 23,17,i8x16.replace_lane,[v128~i32] \to [v128],0,1
 24,18,i16x8.extract_lane_s,[v128] \to [i32],0,1
 25,19,i16x8.extract_lane_u,[v128] \to [i32],0,1
-26,1a,i16x8.replace_lane,[v128 i32] \to [v128],0,1
+26,1a,i16x8.replace_lane,[v128~i32] \to [v128],0,1
 27,1b,i32x4.extract_lane,[v128] \to [i32],0,1
 28,1c,i32x4.replace_lane,[v128~i32] \to [v128],0,1
 29,1d,i64x2.extract_lane,[v128] \to [i64],0,1
@@ -132,8 +132,8 @@ opcode_int,opcode_hex,name,signature,memarg,extra_imm
 130,82,i16x8.q15mulr_sat_s,[v128~v128] \to [v128],0,0
 131,83,i16x8.all_true,[v128] \to [i32],0,0
 132,84,i16x8.bitmask,[v128] \to [i32],0,0
-133,85,i16x8.narrow_i16x8_s,[v128~v128] \to [v128],0,0
-134,86,i16x8.narrow_i16x8_u,[v128~v128] \to [v128],0,0
+133,85,i16x8.narrow_i32x4_s,[v128~v128] \to [v128],0,0
+134,86,i16x8.narrow_i32x4_u,[v128~v128] \to [v128],0,0
 135,87,i16x8.extend_low_i8x16_s,[v128] \to [v128],0,0
 136,88,i16x8.extend_high_i8x16_s,[v128] \to [v128],0,0
 137,89,i16x8.extend_low_i8x16_u,[v128] \to [v128],0,0
@@ -226,7 +226,7 @@ opcode_int,opcode_hex,name,signature,memarg,extra_imm
 224,e0,f32x4.abs,[v128] \to [v128],0,0
 225,e1,f32x4.neg,[v128] \to [v128],0,0
 226,e2,undefined,undefined,undefined,undefined
-227,e3,f32x4.sqrt,[v128] \to [i32],0,0
+227,e3,f32x4.sqrt,[v128] \to [v128],0,0
 228,e4,f32x4.add,[v128~v128] \to [v128],0,0
 229,e5,f32x4.sub,[v128~v128] \to [v128],0,0
 230,e6,f32x4.mul,[v128~v128] \to [v128],0,0
@@ -238,7 +238,7 @@ opcode_int,opcode_hex,name,signature,memarg,extra_imm
 236,ec,f64x2.abs,[v128] \to [v128],0,0
 237,ed,f64x2.neg,[v128] \to [v128],0,0
 238,ee,undefined,undefined,undefined,undefined
-239,ef,f64x2.sqrt,[v128] \to [i32],0,0
+239,ef,f64x2.sqrt,[v128] \to [v128],0,0
 240,f0,f64x2.add,[v128~v128] \to [v128],0,0
 241,f1,f64x2.sub,[v128~v128] \to [v128],0,0
 242,f2,f64x2.mul,[v128~v128] \to [v128],0,0
